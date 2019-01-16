@@ -1,2 +1,6 @@
-<h1>Hi, everybody!</h1>
-<p>Hi, <%= title %>!</p>
+<h1><%= title %>!</h1>
+<ul>
+    <% for(let i=0;i<students.length;i++){%>
+        <li><%= students[i] %></li>
+    <% } %>
+</ul>
