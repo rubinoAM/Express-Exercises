@@ -3,6 +3,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  //Check the var app.use set  to find out if this person is a valid user
+  
   res.render('index', {
     title: 'Digital Crafts: Full-Time Immersive Class Nov. \'18',
     students:[

@@ -9,6 +9,14 @@ var usersRouter = require('./routes/users');
 
 var app = express();
 
+// app.use() takes 1 arg: callback (middleware!!!)
+app.use((req,res,next)=>{
+  console.log("Is the user in the DB?");
+  //If so, set a var
+  let x = "Logged In";
+  next();
+})
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
